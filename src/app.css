@@ -1,2 +1,12 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+@theme {
+	--font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+	--font-serif: "Fraunces", ui-serif, Georgia, serif;
+}
+
+/* Section label like Bruno template */
+.section-label {
+	@apply text-[10px] font-semibold uppercase tracking-[0.2em] text-stone-400;
+}

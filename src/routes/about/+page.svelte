@@ -3,10 +3,11 @@
 	<meta name="description" content="Gary Fuller is a Solutions Architect based in the Chicago area, specializing in AEM, enterprise AI, and digital transformation." />
 </svelte:head>
 
-<div class="max-w-2xl">
-	<h1 class="text-3xl font-bold text-gray-900 mb-8">About</h1>
+<div class="mx-auto max-w-6xl px-6 py-12 md:py-16">
+	<p class="section-label mb-4">About</p>
+	<h1 class="font-serif text-3xl md:text-4xl font-semibold text-stone-900 mb-10">About me</h1>
 
-	<div class="prose prose-gray max-w-none">
+	<div class="prose prose-stone max-w-2xl prose-p:text-stone-700 prose-p:leading-relaxed prose-a:text-stone-900 prose-a:no-underline hover:prose-a:underline prose-li:text-stone-700">
 		<p>
 			I'm a Solutions Architect based in the Wheaton, Illinois area. I currently lead Enterprise Asset and Content Management architecture at International Motors, where I focus on Adobe Experience Manager, DAM modernization, and large-scale digital governance.
 		</p>
@@ -20,16 +21,16 @@
 			When I'm not architecting systems, I'm into bourbon, audio/video production, Midjourney image generation, 3D modeling in Blender, and gaming.
 		</p>
 
-		<h2>Education</h2>
-		<ul>
+		<h2 class="font-serif text-xl font-semibold text-stone-900 mt-12 mb-4">Education</h2>
+		<ul class="space-y-1 text-stone-700">
 			<li>M.S., Computing and Digital Media — DePaul University</li>
-			<li>B.F.A., Media Arts & Animation — School of the Art Institute of Chicago</li>
+			<li>B.F.A., Media Arts &amp; Animation — School of the Art Institute of Chicago</li>
 			<li>B.A., Philosophy — North Central College</li>
 		</ul>
 
-		<h2>Certifications</h2>
-		<ul>
-			<li>Introduction to Deep Learning & Neural Networks with Keras</li>
+		<h2 class="font-serif text-xl font-semibold text-stone-900 mt-10 mb-4">Certifications</h2>
+		<ul class="space-y-1 text-stone-700">
+			<li>Introduction to Deep Learning &amp; Neural Networks with Keras</li>
 			<li>Machine Learning with Python</li>
 			<li>Deep Learning with Keras and TensorFlow</li>
 			<li>Strategic Leadership and Management</li>
@@ -37,11 +38,17 @@
 		</ul>
 	</div>
 
-	<div class="mt-10 flex gap-4">
-		<a href="/resume" class="inline-flex items-center px-5 py-2.5 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-700 transition-colors">
+	<div class="mt-12 flex flex-wrap gap-4">
+		<a
+			href="/resume"
+			class="inline-flex items-center px-5 py-2.5 bg-stone-900 text-white text-sm font-medium rounded-full hover:bg-stone-700 transition-colors"
+		>
 			View resume
 		</a>
-		<a href="/contact" class="inline-flex items-center px-5 py-2.5 border border-gray-300 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50 transition-colors">
+		<a
+			href="/contact"
+			class="inline-flex items-center px-5 py-2.5 border border-stone-300 text-stone-700 text-sm font-medium rounded-full hover:bg-stone-100 transition-colors"
+		>
 			Get in touch
 		</a>
 	</div>
