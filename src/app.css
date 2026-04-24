@@ -6,6 +6,10 @@
 	--font-serif: "Fraunces", ui-serif, Georgia, serif;
 }
 
+html {
+	font-size: 18px;
+}
+
 /* Section label like Bruno template */
 .section-label {
 	@apply text-[10px] font-semibold uppercase tracking-[0.2em] text-stone-400;

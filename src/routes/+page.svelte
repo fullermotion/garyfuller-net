@@ -4,13 +4,26 @@
 </svelte:head>
 
 <!-- Hero -->
-<section class="mx-auto max-w-6xl px-6 pt-20 pb-16 md:pt-28 md:pb-24">
-	<p class="section-label mb-4">Solutions Architect · Enterprise AI Developer · AEM Expert</p>
-	<h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-stone-900 leading-[1.1] mb-4">
-		Gary Fuller
-	</h1>
-	<p class="font-serif text-xl md:text-2xl text-stone-600 mb-2">UI/UX &amp; Enterprise Solutions Architect</p>
-	<p class="text-stone-500 text-sm uppercase tracking-widest">Based in Wheaton, Illinois</p>
+<section class="mx-auto max-w-6xl px-6 pt-8 pb-6 md:pt-10 md:pb-10">
+	<div class="flex flex-col-reverse md:flex-row md:items-end md:justify-between gap-10 md:gap-16">
+		<div>
+			<p class="section-label mb-4">Solutions Architect · Enterprise AI Developer · AEM Expert</p>
+			<h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-stone-900 leading-[1.1] mb-4">
+				Gary Fuller
+			</h1>
+			<p class="font-serif text-xl md:text-2xl text-stone-600 mb-2">UI/UX &amp; Enterprise Solutions Architect</p>
+			<p class="text-stone-500 text-sm uppercase tracking-widest">Based in Wheaton, Illinois</p>
+		</div>
+		<div class="shrink-0">
+			<div class="w-44 h-44 md:w-56 md:h-56 rounded-full overflow-hidden border border-stone-300">
+				<img
+					src="/images/fullermotion_Create_a_line_drawing_portrait_of_Gary_in_the_spir_00a7daff-d9dc-4e4f-af93-aa0ed6532810.png"
+					alt="Portrait of Gary Fuller"
+					class="w-full h-full object-cover object-[center_15%]"
+				/>
+			</div>
+		</div>
+	</div>
 </section>
 
 <!-- Biography -->

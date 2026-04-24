@@ -12,9 +12,17 @@
 		{ href: '/about', label: 'About' }
 	];
 
+	let menuOpen = $state(false);
+
 	function isActive(href: string) {
 		return $page.url.pathname === href || $page.url.pathname.startsWith(href + '/');
 	}
+
+	// Close menu on navigation
+	$effect(() => {
+		$page.url.pathname;
+		menuOpen = false;
+	});
 </script>
 
 <Analytics />
@@ -28,7 +36,9 @@
 		<a href="/" class="font-serif text-lg font-semibold text-stone-900 hover:text-stone-600 transition-colors">
 			Gary Fuller
 		</a>
-		<nav class="flex items-center gap-8">
+
+		<!-- Desktop nav -->
+		<nav class="hidden md:flex items-center gap-8">
 			{#each navLinks as link}
 				<a
 					href={link.href}
@@ -44,7 +54,38 @@
 				Book me
 			</a>
 		</nav>
+
+		<!-- Hamburger button -->
+		<button
+			class="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5"
+			onclick={() => menuOpen = !menuOpen}
+			aria-label="Toggle menu"
+		>
+			<span class="block w-5 h-px bg-stone-900 transition-all duration-200 {menuOpen ? 'translate-y-2 rotate-45' : ''}"></span>
+			<span class="block w-5 h-px bg-stone-900 transition-all duration-200 {menuOpen ? 'opacity-0' : ''}"></span>
+			<span class="block w-5 h-px bg-stone-900 transition-all duration-200 {menuOpen ? '-translate-y-2 -rotate-45' : ''}"></span>
+		</button>
 	</div>
+
+	<!-- Mobile menu -->
+	{#if menuOpen}
+		<nav class="md:hidden border-t border-stone-200 bg-stone-50 px-6 py-4 flex flex-col gap-4">
+			{#each navLinks as link}
+				<a
+					href={link.href}
+					class="text-sm font-medium transition-colors {isActive(link.href) ? 'text-stone-900' : 'text-stone-500'}"
+				>
+					{link.label}
+				</a>
+			{/each}
+			<a
+				href="/contact"
+				class="text-sm font-medium px-4 py-2 bg-stone-900 text-white rounded-full hover:bg-stone-700 transition-colors text-center mt-2"
+			>
+				Book me
+			</a>
+		</nav>
+	{/if}
 </header>
 
 <main>
